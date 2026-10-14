@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: 安装前端依赖
+        run: npm ci
+
+      - name: 演示数据层单测
+        run: npm run test:demo
+
+      - name: 前端构建
+        run: npm run build
+
+      - name: 安装后端依赖
+        run: npm --prefix server ci
+
+      - name: 后端构建与单测（不需要数据库）
+        run: npm --prefix server test
+
+      - name: 敏感信息门禁
+        run: npm run audit:public

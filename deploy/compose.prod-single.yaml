@@ -1,0 +1,91 @@
+# 单机正式版：Caddy（自动 HTTPS）+ API + PostgreSQL 容器。
+# 适合 2 核 4G 的班级站点：不需要额外购买托管 PostgreSQL，
+# 代价是数据库与应用同机，必须保证每日备份（deploy/scripts/backup-postgres.sh + cron）。
+#
+# 与 deploy/compose.yaml 的区别：那个版本把数据库放在腾讯云托管实例上，
+# 通过 VPC 内网连接；本文件用容器内数据库，省一台数据库实例的费用。
+
+name: ${COMPOSE_PROJECT_NAME:-class-hub}
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?APP_DOMAIN is required}
+      ACME_EMAIL: ${ACME_EMAIL:?ACME_EMAIL is required}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./caddy/Caddyfile.prod:/etc/caddy/Caddyfile:ro
+      - "${WEB_ROOT:?WEB_ROOT is required}:/srv/web:ro"
+      - caddy_data:/data
+      - caddy_config:/config
+    mem_limit: 160m
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [app]
+
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      APP_ORIGIN: https://${APP_DOMAIN:?APP_DOMAIN is required}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DEPLOY_VERSION: ${DEPLOY_VERSION:-unknown}
+      BUILD_TIME: ${BUILD_TIME:-}
+      AUTH_SECRET: ${AUTH_SECRET:?AUTH_SECRET is required}
+      STUDENT_ID_HMAC_KEY: ${STUDENT_ID_HMAC_KEY:?STUDENT_ID_HMAC_KEY is required}
+      CLASS_ACTIVATION_CODE: ${CLASS_ACTIVATION_CODE:?CLASS_ACTIVATION_CODE is required}
+      FALLBACK_OWNER_ID: ${FALLBACK_OWNER_ID:-}
+      FALLBACK_OWNER_NAME: ${FALLBACK_OWNER_NAME:-}
+      FALLBACK_OWNER_KEY: ${FALLBACK_OWNER_KEY:-}
+      COOKIE_SECURE: "true"
+      SESSION_DAYS: ${SESSION_DAYS:-30}
+      ADMIN_REAUTH_MINUTES: ${ADMIN_REAUTH_MINUTES:-15}
+    expose: ["3000"]
+    mem_limit: 448m
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [app]
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB is required}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    mem_limit: 768m
+    shm_size: 128mb
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [app]
+
+volumes:
+  caddy_data:
+  caddy_config:
+  postgres_data:
+
+networks:
+  app:

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="28" fill="#920f15"/>
+  <circle cx="64" cy="64" r="44" fill="none" stroke="#ebd1a5" stroke-width="3"/>
+  <path d="M22 79 44 48l13 18 12-26 37 39" fill="none" stroke="#fffcf7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 90h66" stroke="#ebd1a5" stroke-width="3" stroke-linecap="round"/>
+  <text x="64" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="18" fill="#fffcf7">SDU 11</text>
+</svg>

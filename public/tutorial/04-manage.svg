@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="管理界面示意图">
+  <rect width="640" height="360" fill="#F7F6F3"/>
+  <rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#DED7CA"/>
+  <text x="36" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="2" fill="#8B857A">MANAGE</text>
+  <text x="36" y="82" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#2B2823">管理</text>
+  <rect x="500" y="52" width="104" height="32" rx="9" fill="#FFFCF7" stroke="#DED7CA"/>
+  <text x="552" y="73" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#2B2823" text-anchor="middle">重新验证</text>
+  <line x1="36" y1="104" x2="604" y2="104" stroke="#DED7CA"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">
+    <rect x="36" y="120" width="66" height="28" rx="14" fill="#FDECE7" stroke="#920F15"/>
+    <text x="69" y="138" fill="#920F15" text-anchor="middle">成员</text>
+    <rect x="110" y="120" width="86" height="28" rx="14" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="153" y="138" fill="#625E56" text-anchor="middle">名单导入</text>
+    <rect x="204" y="120" width="66" height="28" rx="14" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="237" y="138" fill="#625E56" text-anchor="middle">公告</text>
+    <rect x="278" y="120" width="66" height="28" rx="14" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="311" y="138" fill="#625E56" text-anchor="middle">反馈</text>
+    <rect x="352" y="120" width="80" height="28" rx="14" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="392" y="138" fill="#625E56" text-anchor="middle">回收站</text>
+    <rect x="440" y="120" width="66" height="28" rx="14" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="473" y="138" fill="#625E56" text-anchor="middle">审计</text>
+  </g>
+
+  <rect x="36" y="164" width="568" height="88" rx="12" fill="#F2EDE3" stroke="#DED7CA"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#8B857A">
+    <text x="54" y="186">姓名</text><text x="192" y="186">学号末四位</text><text x="316" y="186">分组</text><text x="428" y="186">角色</text><text x="530" y="186">状态</text>
+  </g>
+  <line x1="36" y1="196" x2="604" y2="196" stroke="#DED7CA"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#2B2823">
+    <text x="54" y="220">张三</text><text x="192" y="220">1001</text><text x="316" y="220">一组</text>
+    <rect x="428" y="209" width="72" height="22" rx="6" fill="#FFFCF7" stroke="#DED7CA"/><text x="464" y="224" font-size="9" text-anchor="middle">成员</text>
+    <rect x="530" y="209" width="56" height="22" rx="6" fill="#E7F2EA"/><text x="558" y="224" font-size="9" fill="#22734A" text-anchor="middle">已启用</text>
+    <line x1="36" y1="240" x2="604" y2="240" stroke="#DED7CA"/>
+    <text x="54" y="262" font-family="Arial, Helvetica, sans-serif" font-size="10">李四</text>
+    <text x="88" y="262" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#BF2C12">兜底</text>
+    <text x="192" y="262" font-family="Arial, Helvetica, sans-serif" font-size="10">1002</text><text x="316" y="262" font-family="Arial, Helvetica, sans-serif" font-size="10">二组</text>
+    <rect x="428" y="251" width="72" height="22" rx="6" fill="#FFFCF7" stroke="#DED7CA"/><text x="464" y="266" font-size="9" text-anchor="middle">管理员</text>
+    <rect x="530" y="251" width="56" height="22" rx="6" fill="#E7F2EA"/><text x="558" y="266" font-size="9" fill="#22734A" text-anchor="middle">已启用</text>
+  </g>
+
+  <rect x="36" y="268" width="568" height="66" rx="12" fill="#FFFCF7" stroke="#DED7CA"/>
+  <g>
+    <rect x="54" y="286" width="20" height="20" rx="10" fill="#FDE7DF"/>
+    <text x="64" y="300" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#920F15" text-anchor="middle">!</text>
+    <rect x="88" y="290" width="150" height="12" rx="6" fill="#2B2823"/>
+    <rect x="88" y="310" width="320" height="8" rx="4" fill="#C7BEB0"/>
+    <text x="586" y="316" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#BF2C12" text-anchor="end">导入 50 人</text>
+  </g>
+</svg>

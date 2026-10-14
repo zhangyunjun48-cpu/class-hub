@@ -1,0 +1,30 @@
+{
+  "name": "class-hub-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node --max-old-space-size=448 dist/server/src/server.js",
+    "test": "npm run build && node --test \"dist/server/src/**/*.test.js\"",
+    "db:migrate": "node dist/server/src/db/migrate.js",
+    "db:migrate:dev": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.44.5",
+    "fastify": "^5.6.2",
+    "pg": "^8.16.3",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.20.5",
+    "typescript": "^6.0.3"
+  }
+}
+
+

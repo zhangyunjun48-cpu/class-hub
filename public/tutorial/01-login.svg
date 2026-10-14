@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="登录界面示意图">
+  <rect width="640" height="360" fill="#F7F6F3"/>
+  <rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#DED7CA"/>
+  <g>
+    <circle cx="72" cy="66" r="26" fill="#920F15"/>
+    <circle cx="72" cy="66" r="22" fill="none" stroke="#EBD1A5" stroke-width="3"/>
+    <text x="72" y="75" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">班</text>
+  </g>
+  <text x="40" y="128" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="2" fill="#8B857A">CLASS SHARED HUB</text>
+  <rect x="40" y="144" width="250" height="20" rx="4" fill="#2B2823"/>
+  <rect x="40" y="174" width="196" height="20" rx="4" fill="#2B2823"/>
+  <rect x="40" y="212" width="272" height="9" rx="4" fill="#C7BEB0"/>
+  <rect x="40" y="229" width="238" height="9" rx="4" fill="#C7BEB0"/>
+  <g fill="#22734A">
+    <text x="40" y="266" font-family="Arial, Helvetica, sans-serif" font-size="12">✓ 先看今天与截止事项</text>
+    <text x="40" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12">✓ 发现变化可以直接修改</text>
+    <text x="40" y="310" font-family="Arial, Helvetica, sans-serif" font-size="12">✓ 版本不一致时不会静默覆盖</text>
+  </g>
+  <g>
+    <rect x="356" y="46" width="248" height="268" rx="16" fill="#FFFCF7" stroke="#DED7CA"/>
+    <text x="378" y="82" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#2B2823">成员登录</text>
+    <text x="378" y="100" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8B857A">使用白名单中的学号与姓名</text>
+    <text x="378" y="132" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#625E56">学号</text>
+    <rect x="378" y="140" width="204" height="30" rx="8" fill="#F7F6F3" stroke="#DED7CA"/>
+    <rect x="390" y="151" width="86" height="8" rx="4" fill="#C7BEB0"/>
+    <text x="378" y="194" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#625E56">姓名</text>
+    <rect x="378" y="202" width="204" height="30" rx="8" fill="#F7F6F3" stroke="#DED7CA"/>
+    <rect x="390" y="213" width="62" height="8" rx="4" fill="#C7BEB0"/>
+    <text x="378" y="256" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#625E56">班级激活码</text>
+    <rect x="378" y="264" width="204" height="30" rx="8" fill="#F7F6F3" stroke="#E63E21"/>
+    <circle cx="394" cy="279" r="4" fill="#E63E21"/>
+    <circle cx="408" cy="279" r="4" fill="#E63E21"/>
+    <circle cx="422" cy="279" r="4" fill="#E63E21"/>
+    <circle cx="436" cy="279" r="4" fill="#E63E21"/>
+    <rect x="378" y="306" width="204" height="34" rx="9" fill="#920F15"/>
+    <text x="480" y="328" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">下一步</text>
+  </g>
+</svg>

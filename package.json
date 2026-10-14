@@ -1,0 +1,29 @@
+{
+  "name": "class-hub",
+  "private": true,
+  "version": "0.2.1-demo.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:demo": "vite --mode demo",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server:dev": "npm --prefix server run dev",
+    "server:build": "npm --prefix server run build",
+    "server:test": "npm --prefix server test",
+    "build:all": "npm run build && npm --prefix server run build",
+    "test:all": "npm run test:demo && npm run build && npm --prefix server test",
+    "test:demo": "node --test \"tests/*.test.js\"",
+    "audit:public": "node scripts/audit-public.mjs"
+  },
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "date-fns-tz": "^3.2.0",
+    "lucide-react": "0.577.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "vite": "8.2.0"
+  }
+}

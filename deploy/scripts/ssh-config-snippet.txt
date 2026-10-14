@@ -1,0 +1,15 @@
+# 把下面这段追加到 ~/.ssh/config（Windows 上是 C:\Users\<你>\.ssh\config）
+# 作用：固定服务器别名、强制只用指定私钥、开启保活（长时间空闲不再掉线）。
+
+Host class-hub
+    HostName <your-server-ip>
+    User <your-user>
+    IdentityFile ~/.ssh/classhub_owner.pem
+    IdentitiesOnly yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 6
+    TCPKeepAlive yes
+    ConnectTimeout 15
+    ControlMaster auto
+    ControlPath ~/.ssh/cm-%r@%h:%p
+    ControlPersist 10m

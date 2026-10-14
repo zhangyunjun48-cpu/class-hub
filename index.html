@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#920f15" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="班级共享站：全班共享同一份日程、课表与公告。" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      // 该站点曾有旧版 Service Worker 缓存整站，会覆盖新代码。这里主动注销一次并清理缓存。
+      (function () {
+        if (!("serviceWorker" in navigator)) return;
+        navigator.serviceWorker.getRegistrations().then(function (registrations) {
+          if (!registrations.length) return;
+          Promise.all(registrations.map(function (registration) { return registration.unregister(); })).then(function () {
+            if ("caches" in window) {
+              caches.keys().then(function (keys) {
+                keys.filter(function (key) { return key.indexOf("classhub") === 0; }).forEach(function (key) { caches.delete(key); });
+              });
+            }
+            if (navigator.serviceWorker.controller && !sessionStorage.getItem("classhub-sw-reset")) {
+              sessionStorage.setItem("classhub-sw-reset", "1");
+              location.reload();
+            }
+          });
+        });
+      })();
+    </script>
+    <title>班级共享站</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

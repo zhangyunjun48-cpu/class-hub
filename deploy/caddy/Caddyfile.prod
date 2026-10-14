@@ -1,0 +1,30 @@
+{
+	email {$ACME_EMAIL}
+}
+
+# 单机正式版：只服务备案域名，自动申请并续期 Let's Encrypt 证书。
+# 未匹配到域名的请求（例如直接用 IP 访问）不会命中任何站点，Caddy 返回 404。
+{$APP_DOMAIN} {
+	encode zstd gzip
+
+	header {
+		X-Robots-Tag "noindex, nofollow"
+		-Server
+	}
+
+	handle /api/* {
+		reverse_proxy api:3000
+	}
+
+	handle /events {
+		reverse_proxy api:3000 {
+			flush_interval -1
+		}
+	}
+
+	handle {
+		root * /srv/web/current
+		try_files {path} /index.html
+		file_server
+	}
+}

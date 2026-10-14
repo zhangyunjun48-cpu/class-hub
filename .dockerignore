@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+server/node_modules
+dist
+server/dist
+outputs
+work
+coverage
+*.log
+.env
+.env.*
+deploy/.env

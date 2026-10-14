@@ -1,0 +1,43 @@
+{
+  email {$ACME_EMAIL}
+}
+
+{$APP_DOMAIN} {
+  encode zstd gzip
+
+  handle /api/* {
+    reverse_proxy api-prod:3000
+  }
+
+  handle /events {
+    reverse_proxy api-prod:3000 {
+      flush_interval -1
+    }
+  }
+
+  handle {
+    root * /srv/web/current
+    try_files {path} /index.html
+    file_server
+  }
+}
+
+{$STAGING_DOMAIN} {
+  encode zstd gzip
+
+  handle /api/* {
+    reverse_proxy api-staging:3000
+  }
+
+  handle /events {
+    reverse_proxy api-staging:3000 {
+      flush_interval -1
+    }
+  }
+
+  handle {
+    root * /srv/web/current
+    try_files {path} /index.html
+    file_server
+  }
+}

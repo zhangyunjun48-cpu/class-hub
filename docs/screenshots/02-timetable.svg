@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="课表界面示意图">
+  <rect width="720" height="420" fill="#F7F6F3"/>
+  <rect width="720" height="52" fill="#FFFCF7"/><line x1="0" y1="52" x2="720" y2="52" stroke="#DED7CA"/>
+  <circle cx="34" cy="26" r="13" fill="#920F15"/><text x="34" y="31" font-family="sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">班</text>
+  <rect x="56" y="20" width="70" height="13" rx="4" fill="#2B2823"/>
+  <rect x="276" y="16" width="52" height="24" rx="8" fill="#FDECE7"/><text x="302" y="32" font-family="sans-serif" font-size="11" font-weight="700" fill="#920F15" text-anchor="middle">课表</text>
+  <text x="32" y="86" font-family="sans-serif" font-size="10" letter-spacing="2" fill="#8B857A">TIMETABLE</text>
+  <text x="32" y="112" font-family="sans-serif" font-size="22" font-weight="700" fill="#2B2823">本周课表</text>
+  <text x="32" y="132" font-family="sans-serif" font-size="11" fill="#625E56">当前第 7 周 · 第 4-18 周课程已开始</text>
+  <g font-family="sans-serif">
+    <rect x="470" y="86" width="64" height="28" rx="8" fill="#FFFCF7" stroke="#DED7CA"/><text x="502" y="105" font-size="10" fill="#625E56" text-anchor="middle">上一周</text>
+    <rect x="540" y="86" width="56" height="28" rx="8" fill="#FDECE7"/><text x="568" y="105" font-size="10" font-weight="700" fill="#920F15" text-anchor="middle">本周</text>
+    <rect x="602" y="86" width="64" height="28" rx="8" fill="#FFFCF7" stroke="#DED7CA"/><text x="634" y="105" font-size="10" fill="#625E56" text-anchor="middle">下一周</text>
+  </g>
+  <line x1="32" y1="152" x2="688" y2="152" stroke="#DED7CA"/>
+  <g font-family="sans-serif" font-size="9" font-weight="700" fill="#8B857A">
+    <text x="52" y="176">节次</text><text x="150" y="176" text-anchor="middle">周一</text><text x="238" y="176" text-anchor="middle">周二</text><text x="326" y="176" text-anchor="middle">周三</text><text x="414" y="176" text-anchor="middle">周四</text><text x="502" y="176" text-anchor="middle">周五</text><text x="590" y="176" text-anchor="middle">周六</text><text x="660" y="176" text-anchor="middle">周日</text>
+  </g>
+  <rect x="380" y="160" width="68" height="240" fill="#FDECE7" opacity="0.5"/>
+  <text x="414" y="176" font-family="sans-serif" font-size="9" font-weight="700" fill="#920F15" text-anchor="middle">周四</text>
+  <g font-family="sans-serif" font-size="8">
+    <text x="52" y="212" fill="#625E56">1-2 节</text>
+    <text x="52" y="268" fill="#625E56">3-4 节</text>
+    <text x="52" y="324" fill="#625E56">5-6 节</text>
+    <text x="52" y="380" fill="#625E56">7-8 节</text>
+    <rect x="380" y="188" width="68" height="48" rx="6" fill="#fff" stroke="#920F15"/>
+    <text x="386" y="202" fill="#2B2823">高等数学(1)</text><text x="386" y="214" fill="#8B857A">1区307</text>
+    <rect x="118" y="244" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="124" y="258" fill="#2B2823">高等数学</text><text x="124" y="270" fill="#8B857A">1区307</text>
+    <rect x="206" y="244" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="212" y="258" fill="#2B2823">新工科英语</text><text x="212" y="270" fill="#8B857A">4区102</text>
+    <rect x="294" y="244" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="300" y="258" fill="#2B2823">高等数学</text><text x="300" y="270" fill="#8B857A">1区307</text>
+    <rect x="118" y="300" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="124" y="314" fill="#2B2823">高级程序设计</text><text x="124" y="326" fill="#8B857A">1区307</text>
+    <rect x="382" y="300" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="388" y="314" fill="#2B2823">习概</text><text x="388" y="326" fill="#8B857A">1区307</text>
+    <rect x="470" y="356" width="68" height="48" rx="6" fill="#fff" stroke="#DED7CA"/><text x="476" y="370" fill="#2B2823">新生研讨课</text><text x="476" y="382" fill="#8B857A">1区308</text>
+  </g>
+</svg>

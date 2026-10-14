@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="管理台界面示意图">
+  <rect width="720" height="420" fill="#F7F6F3"/>
+  <rect width="720" height="52" fill="#FFFCF7"/><line x1="0" y1="52" x2="720" y2="52" stroke="#DED7CA"/>
+  <circle cx="34" cy="26" r="13" fill="#920F15"/><text x="34" y="31" font-family="sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">班</text>
+  <rect x="56" y="20" width="70" height="13" rx="4" fill="#2B2823"/>
+  <rect x="330" y="16" width="60" height="24" rx="8" fill="#FDECE7"/><text x="360" y="32" font-family="sans-serif" font-size="11" font-weight="700" fill="#920F15" text-anchor="middle">其它</text>
+  <text x="32" y="86" font-family="sans-serif" font-size="10" letter-spacing="2" fill="#8B857A">MANAGE</text>
+  <text x="32" y="112" font-family="sans-serif" font-size="22" font-weight="700" fill="#2B2823">管理</text>
+  <text x="32" y="132" font-family="sans-serif" font-size="11" fill="#625E56">公告、成员、名单、反馈、回收站与审计日志</text>
+  <rect x="556" y="86" width="132" height="32" rx="9" fill="#FFFCF7" stroke="#DED7CA"/><text x="622" y="107" font-family="sans-serif" font-size="11" font-weight="700" fill="#2B2823" text-anchor="middle">重新验证 PIN</text>
+  <line x1="32" y1="146" x2="688" y2="146" stroke="#DED7CA"/>
+  <g font-family="sans-serif" font-size="10" font-weight="700">
+    <rect x="32" y="160" width="58" height="26" rx="13" fill="#FDECE7" stroke="#920F15"/><text x="61" y="177" fill="#920F15" text-anchor="middle">成员</text>
+    <rect x="96" y="160" width="76" height="26" rx="13" fill="#FFFCF7" stroke="#DED7CA"/><text x="134" y="177" fill="#625E56" text-anchor="middle">名单导入</text>
+    <rect x="178" y="160" width="58" height="26" rx="13" fill="#FFFCF7" stroke="#DED7CA"/><text x="207" y="177" fill="#625E56" text-anchor="middle">公告</text>
+    <rect x="242" y="160" width="58" height="26" rx="13" fill="#FFFCF7" stroke="#DED7CA"/><text x="271" y="177" fill="#625E56" text-anchor="middle">反馈</text>
+    <rect x="306" y="160" width="72" height="26" rx="13" fill="#FFFCF7" stroke="#DED7CA"/><text x="342" y="177" fill="#625E56" text-anchor="middle">回收站</text>
+    <rect x="384" y="160" width="58" height="26" rx="13" fill="#FFFCF7" stroke="#DED7CA"/><text x="413" y="177" fill="#625E56" text-anchor="middle">审计</text>
+  </g>
+  <rect x="32" y="200" width="656" height="120" rx="12" fill="#F2EDE3" stroke="#DED7CA"/>
+  <g font-family="sans-serif" font-size="9" font-weight="700" fill="#8B857A">
+    <text x="50" y="222">姓名</text><text x="230" y="222">学号末四位</text><text x="360" y="222">分组</text><text x="470" y="222">角色</text><text x="600" y="222">状态</text>
+  </g>
+  <line x1="32" y1="232" x2="688" y2="232" stroke="#DED7CA"/>
+  <g font-family="sans-serif" font-size="10" fill="#2B2823">
+    <text x="50" y="256">张三</text><text x="230" y="256">1001</text><text x="360" y="256">一组</text>
+    <rect x="470" y="245" width="76" height="22" rx="6" fill="#FFFCF7" stroke="#DED7CA"/><text x="508" y="260" font-size="9" text-anchor="middle">成员</text>
+    <rect x="600" y="245" width="60" height="22" rx="6" fill="#E7F2EA"/><text x="630" y="260" font-size="9" fill="#22734A" text-anchor="middle">已启用</text>
+    <line x1="32" y1="276" x2="688" y2="276" stroke="#DED7CA"/>
+    <text x="50" y="298">李四</text><text x="230" y="298">1002</text><text x="360" y="298">班委</text>
+    <rect x="470" y="287" width="76" height="22" rx="6" fill="#FFFCF7" stroke="#DED7CA"/><text x="508" y="302" font-size="9" text-anchor="middle">管理员</text>
+    <rect x="600" y="287" width="60" height="22" rx="6" fill="#E7F2EA"/><text x="630" y="302" font-size="9" fill="#22734A" text-anchor="middle">已启用</text>
+  </g>
+  <rect x="32" y="334" width="656" height="56" rx="12" fill="#FFFCF7" stroke="#DED7CA"/>
+  <text x="50" y="356" font-family="sans-serif" font-size="11" font-weight="700" fill="#2B2823">名单导入</text>
+  <rect x="50" y="364" width="420" height="14" rx="4" fill="#F2EDE3"/>
+  <rect x="490" y="352" width="86" height="26" rx="8" fill="#920F15"/><text x="533" y="369" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">解析预览</text>
+  <rect x="586" y="352" width="86" height="26" rx="8" fill="#FFFCF7" stroke="#DED7CA"/><text x="629" y="369" font-family="sans-serif" font-size="10" font-weight="700" fill="#2B2823" text-anchor="middle">确认入库</text>
+</svg>
